@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Justin Bieber Fanpage 💜✨</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <header>
+    <h1 id="title">JUSTIN BIEBER FANPAGE</h1>
+    <p class="subtitle" id="subtitle-text"></p>
+    <div id="music-ui">
+      <button class="btn" id="play-music-btn" onclick="togglePlayer(true)">
+        🎵 Play Music
+      </button>
+
+      <div id="custom-player" style="display:none;">
+        <div class="player-bar">
+          <div id="song-title" style="text-align:center; font-family: 'Poppins', sans-serif; font-size: 1.1rem; margin-bottom: 6px; color: #fff; text-shadow: 0 0 6px #a300a3;">
+            Loading...
+          </div>
+
+          <button id="play-pause" class="player-btn">⏸️</button>
+          <input type="range" id="seekbar" min="0" max="100" value="0"/>
+          <span id="current-time">0:00</span> /
+          <span id="duration">0:00</span>
+          <input type="range" id="volume" min="0" max="1" step="0.01" value="1"/>
+          <button class="player-btn" id="mute-btn">🔊</button>
+        </div>
+      </div>
+
+      <audio id="bg-music" loop></audio>
+    </div>
+  </header>
+
+  <section class="slideshow-container">
+    <img class="slides" src="https://cdn.britannica.com/68/226968-050-C2FF98B9/Canadian-singer-Justin-Bieber-2021.jpg" alt="JB1">
+    <img class="slides" src="https://static-www.adweek.com/wp-content/uploads/files/blogs/ck-bieber-hed-2014.jpg" alt="JB2">
+    <img class="slides" src="https://c.tenor.com/0U6gpSWv0VYAAAAd/tenor.gif" alt="JB3">
+    <img class="slides" src="https://akns-images.eonline.com/eol_images/Entire_Site/2016810/rs_634x1024-160910095637-634.justin-bieber-3.cm.91016.jpg " alt="JB4">
+    <img class="slides" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Justin_Bieber_mugshot%2C_front.jpg" alt="JB5">
+  </section>
+
+  <!-- Navigation dots -->
+  <div class="dots">
+    <span class="dot" onclick="showSlide(0)"></span>
+    <span class="dot" onclick="showSlide(1)"></span>
+    <span class="dot" onclick="showSlide(2)"></span>
+    <span class="dot" onclick="showSlide(3)"></span>
+    <span class="dot" onclick="showSlide(4)"></span>
+  </div>
+
+  <div id="chatbot">
+    <div id="chat-header">Chat with Justin (REAL)</div>
+    <div id="chat-messages"></div>
+    <input type="text" id="chat-input" placeholder="Say something..." autocomplete="off" />
+    <button id="chat-send">Send &nbsp; ➤</button>
+  </div>
+
+  <footer>
+    Made with 💜 by G4 Ashwin Edward ✨
+  </footer>
+
+  <audio id="bg-music" loop>
+    <source src="./music/baby.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>

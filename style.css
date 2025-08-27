@@ -1,0 +1,331 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #ff77ff, #6e00ff);
+  font-family: "Poppins", sans-serif;
+  color: white;
+  overflow: hidden; /* remove scrollbars */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* space: header slideshow footer */
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  z-index: 2;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3.2rem;
+  margin: 0;
+  text-shadow: 0 0 20px #fff, 0 0 40px #ff00ff;
+}
+
+header .subtitle {
+  font-size: 1rem;
+  color: #ffe6ff;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #b101b1;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #fff, 0 0 40px #ff00ff;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Slideshow fills most of central space */
+.slideshow-container {
+  position: relative;
+  flex: 1;
+  max-width: 90vw;
+  max-height: 70vh; /* slideshow fits nicely above footer */
+  margin: 10px auto;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #ff00ff;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slides {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keep entire image */
+  background: black;
+  border-radius: 20px;
+  animation: fade 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.3;}
+  to {opacity: 1;}
+}
+
+/* Dots */
+.dots {
+  text-align: center;
+  margin: 10px;
+  z-index: 2;
+}
+.dot {
+  height: 14px;
+  width: 14px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+.active {
+  background-color: #ff00ff;
+  box-shadow: 0 0 10px #fff;
+}
+
+/* Footer stays at bottom */
+footer {
+  text-align: center;
+  padding: 10px;
+  z-index: 2;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Emoji Effects */
+.floating-emoji {
+  position: absolute;
+  font-size: 2rem;
+  pointer-events: none;
+  animation: floatUp 2s ease forwards;
+}
+
+@keyframes floatUp {
+  0% {opacity: 1; transform: translateY(0);}
+  100% {opacity: 0; transform: translateY(-200px);}
+}
+
+#custom-player {
+  background: linear-gradient(90deg, #a300a3, #35007b);
+  border-radius: 30px;
+  box-shadow: 0 0 20px #ff00ff;
+  padding: 20px 32px;
+  display: flex; /* This is just for the outer bar */
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.player-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.player-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  width: 48px; height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.player-btn:active {
+  transform: scale(0.92);
+}
+.player-btn:hover {
+  transform: scale(1.2);
+}
+
+#seekbar, #volume {
+  accent-color: #ff00ff;
+  height: 8px;
+  border-radius: 10px;
+  background: #fff;
+  outline: none;
+  border: none;
+  margin: 0 6px;
+}
+
+#seekbar {
+  width: 170px;
+  min-width: 90px;
+  max-width: 35vw;
+}
+#volume {
+  width: 70px;
+  min-width: 40px;
+  max-width: 100px;
+}
+
+#current-time, #duration {
+  font-family: "Poppins", sans-serif;
+  min-width: 40px;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 0 0 4px #6e00ff;
+  text-align: center;
+  padding: 0 3px;
+}
+
+#play-music-btn {
+  margin: 12px 0;
+  margin-bottom: 18px;
+  box-shadow: 0 0 10px #ff00ff;
+  animation: glowBtn 1s infinite alternate;
+}
+
+@keyframes glowBtn {
+  from { box-shadow: 0 0 5px #ff00ff, 0 0 15px #fff;}
+  to   { box-shadow: 0 0 25px #ffe6ff, 0 0 30px #ff00ff;}
+}
+
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 90%;
+    background: linear-gradient(135deg, #a300a3, #35007b);
+    border-radius: 15px;
+    box-shadow: 0 0 20px #ff00ff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+#chat-header {
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ff00ff;
+    text-align: center;
+    user-select: none;
+    background: #550074;
+}
+
+#chat-messages {
+    padding: 10px 15px;
+    overflow-y: auto;
+    flex-grow: 1;
+    font-size: 0.9rem;
+    max-height: calc(100% - 120px);
+}
+
+.chat-message {
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    max-width: 85%;
+    word-wrap: break-word;
+}
+
+.chat-message.user {
+    background: #db00db;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.chat-message.bot {
+    background: #6e00ff;
+    align-self: flex-start;
+    text-align: left;
+}
+
+#chat-input {
+    border: none;
+    outline: none;
+    border-radius: 0 0 0 15px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: #550074;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#chat-input::placeholder {
+    opacity: 0.75;
+    color: white;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+#chat-send {
+    font-family: "Poppins", sans-serif;
+    border: none;
+    background: #fe66fe;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 0 0 15px 0;
+    user-select: none;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+#chat-send:hover {
+    background: #db00db;
+}
+
+@media (max-width: 600px) {
+    #chatbot {
+        width: 250px;
+        max-height: 360px;
+    }
+
+    #chat-header {
+        font-size: 1rem;
+    }
+
+    #chat-input {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    #chat-send {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
