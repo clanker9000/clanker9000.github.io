@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #FAF9F6;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.site-header h1 {
+  font-size: 3rem;
+  color: #e91e63;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+}
+
+
+.tagline {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.hero {
+  margin: 2 0px 0;
+}
+
+.mascot-placeholder {
+  display: inline-block;
+  border: 2px solid #000;
+  background: #ffffff;
+  border-radius: 20px;
+  margin: auto;
+}
+
+#mascot-image {
+  width: 240px;
+  height: auto;
+}
+
+.about {
+  margin: 30px 0;
+  text-align: left;
+}
+
+.about h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.about p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.actions {
+  margin: 25px 0;
+}
+
+.actions button {
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #fff;
+  font-weight: bold;
+}
+
+.buy-tickets {
+  background: rgb(0, 183, 15);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
+}
+
+.make-donation {
+  background: #000ed8;
+  box-shadow: 0px 0px 12px rgba(255, 0, 255, 0.6);
+}
+
+.actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px 4px rgba(0, 255, 255, 0.8);
+}
+
+.actions .make-donation:hover {
+  box-shadow: 0px 0px 20px 4px rgba(255, 0, 255, 0.8);
+}
+
+.site-footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 2px solid #ccc;
+}

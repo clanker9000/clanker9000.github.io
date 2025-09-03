@@ -1,0 +1,108 @@
+/* styles.css - Challenge #2 (Skeleton: Rides Gallery) */
+
+
+/* 0) Base page */
+body {
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fb;
+  color: #222;
+}
+
+
+/* 1) Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* 2) Section heading */
+.site-header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.site-header .tagline {
+  margin-top: 30px;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.attractions h2 {
+  font-size: 1.6rem;
+  margin: 30px 0 20px;
+  font-weight: bold;
+}
+
+
+/* 3) Cards wrapper (center all cards horizontally) */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+
+/* 4) Card (size, spacing, border, rounded corners) */
+.card {
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+  transition: border-color 0.3s ease;
+}
+
+
+/* 5) Card text (h3 title, paragraph blurb) */
+.card h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 12px;
+}
+
+.card .blurb {
+  font-size: 0.9rem;
+  color: #444;
+  margin: 0 12px 12px;
+  line-height: 1.4;
+}
+
+/* 6) Card image (fit within card, centered) */
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* 7) Hover state: change border to green (red*???), then make it wigglew */
+.card:hover {
+  border-color: red;
+  animation: wiggle 0.3s ease-in-out;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+  75% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* 8) Footer */
+.site-footer {
+  margin-top: 40px;
+  padding: 15px 0;
+  font-size: 0.8rem;
+  color: #777;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
