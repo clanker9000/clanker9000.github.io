@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#show-box {
+    width: 100%;
+    background: yellow;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 40%;
+}
+
+/* This is NOT tested in IS216 */
+@keyframes move_show_box {
+    from {
+        top: 0px;
+    }
+
+    to {
+        top: 200px;
+    }
+}
