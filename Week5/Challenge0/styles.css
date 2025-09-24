@@ -1,0 +1,36 @@
+:root {
+  --banner-start: #2b5876;
+  --banner-end: #4e4376;
+}
+
+/* Simple gradient banner */
+.gradient-banner {
+  background: linear-gradient(90deg, var(--banner-start), var(--banner-end));
+  color: #fff;
+}
+
+
+/* Task 2 - Pagination */
+.pagination-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+
+
+/* Task 11 - IMH Hotline */
+#imh-hotline {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: goldenrod;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  z-index: 9999;
+}
+
